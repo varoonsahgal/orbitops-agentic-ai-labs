@@ -1,0 +1,23 @@
+[
+  {
+    "name": "get_stock_level",
+    "description": "Get the on-hand quantity, reorder point and storage bay for one cargo SKU (for example ION-COIL-7, CRYO-SEAL-2, HYDRAZINE-55, HULL-PATCH-K, NAV-GYRO-X).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sku": {"type": "string", "description": "The cargo SKU code, e.g. ION-COIL-7"}
+      },
+      "required": ["sku"]
+    }
+  },
+  {
+    "name": "list_low_stock",
+    "description": "List every cargo SKU whose on-hand quantity is below its reorder point.",
+    "inputSchema": {"type": "object", "properties": {}}
+  },
+  {
+    "name": "get_stock_summary",
+    "description": "Return the full inventory report: every SKU with on-hand quantity, reorder point and bay.",
+    "inputSchema": {"type": "object", "properties": {}}
+  }
+]

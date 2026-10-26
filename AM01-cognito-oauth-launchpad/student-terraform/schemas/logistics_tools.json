@@ -1,0 +1,23 @@
+[
+  {
+    "name": "track_shipment",
+    "description": "Track one cargo shipment by shipment id (SHP-1001 .. SHP-1004): current position, status, carrier, last checkpoint and ETA.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "shipment_id": {"type": "string", "description": "Shipment id such as SHP-1001"}
+      },
+      "required": ["shipment_id"]
+    }
+  },
+  {
+    "name": "list_shipments",
+    "description": "List shipments, optionally filtered by status (IN_TRANSIT, DELAYED, DELIVERED).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "status": {"type": "string", "description": "Optional status filter"}
+      }
+    }
+  }
+]

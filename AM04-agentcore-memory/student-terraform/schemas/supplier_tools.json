@@ -1,0 +1,23 @@
+[
+  {
+    "name": "get_supplier",
+    "description": "Look up one supplier by supplier id (SUP-CERES, SUP-TITAN, SUP-EUROPA, SUP-PHOBOS, SUP-ARMOR) or by the SKU they supply. Returns lead time, rating, contact and contract expiry.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "supplier_id": {"type": "string", "description": "Supplier id such as SUP-CERES"},
+        "sku": {"type": "string", "description": "Alternatively, a cargo SKU such as ION-COIL-7"}
+      }
+    }
+  },
+  {
+    "name": "list_suppliers",
+    "description": "List suppliers, optionally filtered by category (propulsion, navigation, life-support, fuel, structural).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "category": {"type": "string", "description": "Optional category filter"}
+      }
+    }
+  }
+]

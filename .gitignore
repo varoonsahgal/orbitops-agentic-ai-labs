@@ -1,0 +1,15 @@
+# Terraform working files — never commit these
+**/.terraform/
+**/terraform.tfstate
+**/terraform.tfstate.backup
+**/*.tfstate*
+**/crash.log
+**/*.tfvars
+!**/*.tfvars.example
+**/*.tfplan
+# build artifacts (zips are rebuilt at plan time)
+**/build/
+**/agents/build/
+**/__pycache__/
+*.pyc
+.DS_Store

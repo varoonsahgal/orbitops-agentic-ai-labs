@@ -1,0 +1,18 @@
+[
+  {
+    "name": "get_inspection_status",
+    "description": "Get the quality inspection status and findings for an inspection id (INS-501 .. INS-504) or for a shipment id (SHP-1001 .. SHP-1004).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inspection_id": {"type": "string", "description": "Inspection id such as INS-503"},
+        "shipment_id": {"type": "string", "description": "Alternatively, the shipment id such as SHP-1002"}
+      }
+    }
+  },
+  {
+    "name": "list_open_inspections",
+    "description": "List every quality inspection that has not passed yet (PENDING or FAILED).",
+    "inputSchema": {"type": "object", "properties": {}}
+  }
+]
